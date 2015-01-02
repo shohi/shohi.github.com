@@ -21,17 +21,31 @@ Usage:
   {% include custom/categories_list %}
 {% else %}
   {% if categories_list.first[0] == null %}
+    <ul class="tag_box inline">
     {% for category in categories_list %} 
     	<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
     		{{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
     	</a></li>
     {% endfor %}
+    </ul>
   {% else %}
+    <ul class="tag_box inline">
     {% for category in categories_list %} 
     	<li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
     		{{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
     	</a></li>
     {% endfor %}
+    </ul>
   {% endif %}
+
+  {% for category in site.categories %} 
+  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+  {% endfor %}
+
 {% endif %}
+
 {% assign categories_list = nil %}

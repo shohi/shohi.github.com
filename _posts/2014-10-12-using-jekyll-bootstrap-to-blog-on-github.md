@@ -2,6 +2,7 @@
 layout: post
 title: 使用jekyll-bootstrap在github上搭建blog
 category : pages
+guid: dbfd97b7-7aad-a0da-8ace-e6e7b53a015b
 tags : [intro, beginner, jekyll, tutorial]
 ---
 {% include JB/setup %}

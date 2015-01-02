@@ -74,6 +74,21 @@ JB :
   tags_path : /tags.html
   atom_path : /atom.xml
   rss_path : /rss.xml
+  about_path : /about.html
+
+
+  # Setting for customized post_collate
+  posts_collate : 
+    provider : custom
+
+
+  # Setting for customized tags_list
+  tags_list : 
+    provider : custom
+
+  # Setting for customized categories_list
+  categories_list :
+    provider : custom
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -127,4 +142,3 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-  

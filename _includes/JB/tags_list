@@ -21,13 +21,25 @@ Usage:
   {% include custom/tags_list %}
 {% else %}
   {% if tags_list.first[0] == null %}
+    <ul class="tag_box inline listing">
     {% for tag in tags_list %} 
     	<li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
     {% endfor %}
+    </ul>
   {% else %}
+    <ul class="tag_box inline listing">
     {% for tag in tags_list %} 
     	<li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
     {% endfor %}
+    </ul>
   {% endif %}
+
+  {% for tag in tags_list %} 
+  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+  <ul>
+    {% assign pages_list = tag[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
 {% endif %}
 {% assign tags_list = nil %}
