@@ -3,6 +3,7 @@ layout: page
 title : About
 header : Post Archive
 group: navigation
+comments: true
 ---
 
 {% include JB/setup %}
@@ -14,3 +15,5 @@ group: navigation
 <!--
 >  *假如你吃了个鸡蛋，觉得不错，何必要认识那下蛋的母鸡呢？*
 -->
+
+{% include JB/comments %}
