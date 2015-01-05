@@ -20,6 +20,38 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 	
     <script type="text/javascript"> hljs.initHighlightingOnLoad(); </script>
+	
+
+	<script type="text/javascript">
+		var count = 0;
+		
+		function changeChromeDiv(){
+			
+			//获得div
+			var chromeDiv = document.getElementById("isChromeNavigatorContent");
+		
+			var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+			var count = 0;
+
+			if (!isChrome && count == 0){
+				//设置div的属性
+				chromeDiv.innerHTML = '<i>为了你极致的阅读体验，请使用Chrome浏览器, ^_^ -- W.6</i>'; //设置显示的数据，可以是标签．
+				// chromeDiv.style.background = "blue";//设置css样式,s设置背景颜色
+				
+				count++;
+			} else {
+				if (chromeDiv != null){														chromeDiv.parentNode.removeChild(chromeDiv);
+				}
+			
+			}
+					
+		}	
+
+		/*用window.onload调用myfun()*/
+		window.onload=changeChromeDiv;//不要括号
+	</script>
+
+
   </head>
   <body>
       <div id="main" role="main">
@@ -58,6 +90,9 @@
         <div id="content">
         {{ content }}
         </div>
+		
+		<div id='isChromeNavigatorContent' class = "center">
+		</div>
         <footer>
           <div>
             {% assign first_post = site.posts | last %}
