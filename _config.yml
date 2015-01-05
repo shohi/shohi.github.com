@@ -75,6 +75,7 @@ JB :
   atom_path : /atom.xml
   rss_path : /rss.xml
   about_path : /about.html
+  link_path : /link.html
 
 
   # Setting for customized post_collate

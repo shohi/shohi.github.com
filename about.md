@@ -8,7 +8,8 @@ comments: true
 
 {% include JB/setup %}
 
-![What's up, Doc](/assets/images/bugs_bunny/Bugs-bunny-at-miami.jpg)
+![What's up, Doc](/assets/images/bugs_bunny/bugs_bunny_and_elmer_fudd.jpg)
+
 
 > *Ehh, What's up, Doc?*
 
