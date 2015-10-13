@@ -19,7 +19,7 @@ body {
   font-size: 14px;
   font-family: "telexregular", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: #555;
-  background-color: #f9f9f9; }
+  background-color: #ffffff; }
 
 ol, ul {
   list-style-position: inside; }
@@ -73,10 +73,10 @@ code {
   font-size: 85%;
   border-radius:3px;
   /* padding: 2px 5px; */
-  border: 1px dashed #e0e0e0;
+  /* border: 1px dashed #e0e0e0; */
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
 
-code:before, code.after {
+code:before, code:after {
     letter-spacing: -0.2em;
     content:"\00a0";
 }
