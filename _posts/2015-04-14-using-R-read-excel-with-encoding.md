@@ -27,19 +27,18 @@ tags : R
 ***解答***： 
 
 1. 使用`xlsx`中的`read.xlsx`方法将`EXCEL`中的数据读取进来。
-	
+
 		df <- read.xlsx(file_path, sheet_index)
 	
 	在`R`中处理`EXCEL`文件，经常会使用到两个`package`--`XLConnect`和`xlsx`. 一般使用`XLConnect`来获取页签名称，使用`xlsx`来读取数据. 
 
 2. 使用`iconv`进行编码转换，然后对其进行一些处理
-
-		df <- data.frame(lapply(df, as.character))  # 将data.frame中的各列转换成character类型
-		df <- data.frame(lapply(df, iconv, "GBK", "utf-8")) # 将编码由'GBK'转换成'utf-8'
-		
-		# 对df进行处理
-		....
-
+```r
+df <- data.frame(lapply(df, as.character))  # 将data.frame中的各列转换成character类型
+df <- data.frame(lapply(df, iconv, "GBK", "utf-8")) # 将编码由'GBK'转换成'utf-8'
+# 对df进行处理
+# ....
+```
 3. 再次使用`iconv`进行编码转换, 然后将其保存
 		
 		df <- data.frame(lapply(df, as.character))  # 将data.frame中的各列转换成character类型
