@@ -33,12 +33,16 @@ tags : R
 在`R`中处理`EXCEL`文件，经常会使用到两个`package`--`XLConnect`和`xlsx`. 一般使用`XLConnect`来获取页签名称，使用`xlsx`来读取数据. 
 
 2. 使用`iconv`进行编码转换，然后对其进行一些处理
-<pre><code class="r">
-df <- data.frame(lapply(df, as.character))  # 将data.frame中的各列转换成character类型
-df <- data.frame(lapply(df, iconv, "GBK", "utf-8")) # 将编码由'GBK'转换成'utf-8'
-# 对df进行处理
-# ....
-</code></pre>
+
+	<pre>	
+	<code class="R">
+	df <- data.frame(lapply(df, as.character))  # 将data.frame中的各列转换成character类型
+	df <- data.frame(lapply(df, iconv, "GBK", "utf-8")) # 将编码由'GBK'转换成'utf-8
+	# 对df进行处理
+	# ....
+	</code>
+	</pre>
+
 
 3. 再次使用`iconv`进行编码转换, 然后将其保存
 		
