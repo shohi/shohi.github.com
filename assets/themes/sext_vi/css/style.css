@@ -75,8 +75,8 @@ blockquote, pre code {
   font-size: 85%;
   overflow: auto;
   font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  white-space: pre;
-  margin: 1em 0px;
+  /* white-space: pre; */
+  /* margin: 1em 0px; */
   line-height: 1.45;
   display: block;
   overflow: auto; }
