@@ -11,7 +11,7 @@ tags : [R, MySQL]
 > 1. R与Java通信, 需要配置Java环境以及rJava、DBI、RJDBC等R软件包
 > 2. Java与MySQL通信, 需要配置Java环境以及连接数据库的jar包
 
-关于如何配置`Java`环境，另外参看{% post_link 2014-01-03-rjava-set-up %}
+关于如何配置`Java`环境，另外参看[rJava设置]({% post_url 2014-01-03-rjava-set-up %})
 
 <pre>
 <code class="R">
