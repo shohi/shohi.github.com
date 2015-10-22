@@ -5,6 +5,7 @@ category : tech
 tags : [R, MySQL]
 ---
 {% include JB/setup %}
+
 树形结构常见于机构、部门以及其他分类信息中，而存储这些信息常用的数据结构是链表结构，物理存储到数据库表中，一般会包含两列id和parentid，分别指向当前entity和父级entity.
 
 对于树形信息，常见的使用方法有四种：

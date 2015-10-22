@@ -3,7 +3,7 @@ layout: post
 title: MySQL行转列
 category : tech
 guid: 0cf4b71a-0681-4a7a-992e-6f7b1a90d0df
-tags : [mysql]
+tags : [MySQL]
 ---
 {% include JB/setup %}
 
@@ -60,4 +60,4 @@ GROUP BY time
 
 ![mysql-row-col-result](/assets/images/mysql/mysql-row-col-result.jpg)
 
-*The End.*
+***#***
