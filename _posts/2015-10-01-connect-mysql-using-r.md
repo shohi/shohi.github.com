@@ -2,7 +2,9 @@
 layout: post
 title: 使用R连接MySQL数据库
 category : tech
+guid: A145977B-0ACA-4BC6-8D54-9F395998F78B
 tags : [R, MySQL]
+
 ---
 {% include JB/setup %}
 

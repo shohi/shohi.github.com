@@ -2,7 +2,9 @@
 layout: post
 title: 数据库表树型信息抽取(R)
 category : tech
+guid: 6181A0FC-D5C6-4026-9CA4-F352139A4130
 tags : [R, MySQL]
+
 ---
 {% include JB/setup %}
 

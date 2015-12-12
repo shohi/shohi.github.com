@@ -2,7 +2,8 @@
 layout: post
 title: R处理EXCEL中文乱码
 category : tech
-tags : R
+guid: 0E9F22CA-B48D-41C8-98B6-736972314B67
+tags: [R]
 
 ---
 {% include JB/setup %}

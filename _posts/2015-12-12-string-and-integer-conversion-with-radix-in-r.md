@@ -2,7 +2,9 @@
 layout: post
 title: String与Integer的含radix转换(R)
 category: tech
+guid: C2383C86-6048-4EFE-9CE5-0E14B2BC3EB9
 tags: [R]
+
 ---
 {% include JB/setup %}
 
