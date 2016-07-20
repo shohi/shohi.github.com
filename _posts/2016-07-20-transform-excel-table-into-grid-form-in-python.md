@@ -8,7 +8,7 @@ tags: [Python]
 ---
 {% include JB/setup %}
 
-使用Python将Excel中的每个非第一行、第一列的单元格转换成`{'name': rowIndex_colIndex, 'value': value, 'row_header': '', 'col_header':'', 'id':''}`的形式,代码如下:
+使用Python将Excel中的每个非第一行、第一列的单元格转换成`{'id':'', 'group': sheet_name, 'subject_name': row_index + col_index, 'subject_value': value}`的形式,代码如下:
 
 <pre>
 <code class="Python">
