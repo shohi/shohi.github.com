@@ -2,7 +2,7 @@
 layout: post
 title: 使用Python转换Excel单元格
 category: tech
-guid:
+guid: 8ff9f657-4e8c-11e6-85e0-acbc32c984c7
 tags: [Python]
 
 ---
