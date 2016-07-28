@@ -57,7 +57,6 @@ JB :
   #   - When setting BASE_PATH it must be a valid url.
   #     This means always setting the protocol (http|https) or prefixing with "/"
   BASE_PATH : false
-
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
   #
@@ -78,7 +77,6 @@ JB :
   rss_path : /rss.xml
   about_path : /about.html
   link_path : /link.html
-
 
   # Setting for customized post_collate
   posts_collate : 

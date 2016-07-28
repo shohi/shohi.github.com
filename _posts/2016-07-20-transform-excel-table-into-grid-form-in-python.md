@@ -1,12 +1,14 @@
 ---
 layout: post
-title: 使用Python转换Excel单元格
+title: 使用Python单元格化Excel 
+description: ""
 category: tech
-guid: 8ff9f657-4e8c-11e6-85e0-acbc32c984c7
 tags: [Python]
-
+guid: 3c65bf07-54d7-11e6-b57c-acbc32c984c7
 ---
 {% include JB/setup %}
+
+
 
 使用Python将Excel中的每个非第一行、第一列的单元格转换成`{'id':'', 'group': sheet_name, 'subject_name': row_index + col_index, 'subject_value': value}`的形式,代码如下:
 
@@ -120,6 +122,5 @@ if __name__ == '__main__':
   
 </code>
 </pre>
-
 
 
