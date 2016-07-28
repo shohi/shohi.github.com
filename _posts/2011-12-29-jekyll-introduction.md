@@ -1,9 +1,9 @@
 ---
 layout: post
-category : jekyll
+category : Jekyll
 tagline: "Supporting tagline"
 guid: f733d683-e18f-5bfe-8c22-a088b29a8f1c
-tags : [jekyll]
+tags : [Jekyll]
 
 ---
 {% include JB/setup %}
