@@ -9,7 +9,9 @@ tags : [sketch]
 {% include JB/setup %}
 
 使用`sketch`制作渐变颜色，有几个步骤：
-1. 画一个长方形区域，设置颜色填充方式及方向, 如flat linear或者radial
+
+
+`1.`  画一个长方形区域，设置颜色填充方式及方向, 如flat linear或者radial
 
 <img src="/assets/images/sketch/gradient-vertical.png" width="500" alt="gradient-vertical">
 
@@ -19,13 +21,15 @@ tags : [sketch]
 
 
 
-2. 将长方形区域划分成几个颜色段，并指定其首尾颜色。选中渐变线，鼠标点击线上的点即可添加渐变点，拖动渐变点可以调整其位置。新增两个渐变点，分别制定其颜色为`#ffff00`和`#ff7d00`，并将填充方式选为radial.
+`2.`  将长方形区域划分成几个颜色段，并指定其首尾颜色。选中渐变线，鼠标点击线上的点即可添加渐变点，拖动渐变点可以调整其位置。新增两个渐变点，分别制定其颜色为`#ffff00`和`#ff7d00`，并将填充方式选为radial.
 
 <img src="/assets/images/sketch/gradient-multiple.png" width="500" alt="gradient-multiple">
 
 
-添加上图例名称及说明，最终效果如下
+
+`3.`  添加上图例名称及说明，最终效果如下
 ![gradient-legend](/assets/images/sketch/gradient-legend.png)
+
 
 
 ## 问题
