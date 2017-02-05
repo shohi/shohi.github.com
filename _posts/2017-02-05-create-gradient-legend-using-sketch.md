@@ -1,11 +1,11 @@
-—--
+---
 layout: post
 title: 使用sketch制作渐变图例
-category: design
+category : design
 guid: e5290ceb-eba1-11e6-9a6a-acbc32c984c7
-tags: [sketch]
+tags : [sketch]
 
-—--
+---
 {% include JB/setup %}
 
 使用`sketch`制作渐变颜色，有几个步骤：
