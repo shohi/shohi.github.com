@@ -2,9 +2,9 @@
 layout: post
 title: 使用Python合并图片和Google瓦片
 category : tech
+description: ""
 guid: e5290ceb-eba1-11e6-9a6a-acbc32c984c8
 tags : [Python]
-
 ---
 {% include JB/setup %}
 
@@ -119,7 +119,7 @@ def get_png_bound(extent, origin, zoom):
 
 
 
-**END**
+*#END#*
 
 
 
