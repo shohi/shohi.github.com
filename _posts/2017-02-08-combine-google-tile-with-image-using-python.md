@@ -104,10 +104,10 @@ def get_png_bound(extent, origin, zoom):
 </code>
 </pre>
 
+
 最终的效果，样例如下(PNG图为某地市建筑物分布图):
 
-
-<img src=“/assets/images/python/tile_combine_image.png” width=“600” alt=“tile-combine-image”>
+<img src="/assets/images/python/tile_combine_image.png" width="600" alt="tile-combine-image" >
 
 
 
