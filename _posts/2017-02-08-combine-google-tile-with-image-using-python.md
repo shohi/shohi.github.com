@@ -17,7 +17,8 @@ tags : [Python]
 
 具体的`Python`代码如下(`2.7.10`):
 
-<code class=“Python”>
+<pre>
+<code class="python">
 # -*- coding:utf-8 -*-
 from PIL import Image
 import os
@@ -102,7 +103,7 @@ def get_png_bound(extent, origin, zoom):
 
 
 </code>
-
+</pre>
 
 最终的效果，样例如下(PNG图为某地市建筑物分布图):
 
