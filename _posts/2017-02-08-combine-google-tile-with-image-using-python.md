@@ -3,10 +3,12 @@ layout: post
 title: 使用Python合并图片和Google瓦片
 category : tech
 guid: e5290ceb-eba1-11e6-9a6a-acbc32c984c8
-tags : [sketch]
+tags : [Python]
 
 ---
 {% include JB/setup %}
+
+
 
 合并PNG图片与Google瓦片，有如下几个步骤:
 
