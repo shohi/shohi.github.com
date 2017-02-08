@@ -1,11 +1,12 @@
-—
+—--
 layout: post
 title: 使用Python合并图片和Google瓦片
 category : tech
 guid: 13a81db3-be94-4a8d-859d-74fa07d1c045
 tags : [Python]
 
-—
+—--
+
 {% include JB/setup %}
 
 合并PNG图片与Google瓦片，有如下几个步骤:
@@ -34,16 +35,16 @@ def merge_tile_and_png(png_info, result_filepath):
     extent = png_info[‘extent’]
     zoom = png_info[‘zoom’]
 		
-		# 注意瓦片的编号规则
+	# 注意瓦片的编号规则
     tile_bound = get_tile_bound(extent, zoom)
     tile_dir = os.path.join(tile_base_dir, str(zoom))
 
-		# 2. 拼接瓦片，生成底图
-		color = (255, 255, 255, 0)
+	# 2. 拼接瓦片，生成底图
+	color = (255, 255, 255, 0)
     width = int((tile_bound[2] - tile_bound[0] + 1)* tile_size)
     height = int((tile_bound[3] - tile_bound[1] + 1)* tile_size)
 
-		out = Image.new(‘RGBA’, (width, height), color)
+	out = Image.new(‘RGBA’, (width, height), color)
     imx = 0;
     for x in range(tile_bound[0], tile_bound[2] + 1):
         imy = 0
@@ -56,30 +57,30 @@ def merge_tile_and_png(png_info, result_filepath):
         imx += tile_size
 
     # 3. 根据zoom, 调整图片大小
-		png_bound = get_png_bound(extent, tile_bound[-2:], zoom)    
+	png_bound = get_png_bound(extent, tile_bound[-2:], zoom)    
 
-		png_size = (png_bound[2] - png_bound[0], png_bound[3] - png_bound[1])
-		im = Image.open(png_info[‘file_path’])
-		png_pic = im.resize(png_size, Image.ANTIALIAS)
-		
-		# 4. 计算PNG图片相对瓦片的偏移，并放置到底图上
-		out.paste(png_pic, (png_bound[0], png_bound[1]), png_pic)
+	png_size = (png_bound[2] - png_bound[0], png_bound[3] - png_bound[1])
+	im = Image.open(png_info[‘file_path’])
+	png_pic = im.resize(png_size, Image.ANTIALIAS)
+	
+	# 4. 计算PNG图片相对瓦片的偏移，并放置到底图上
+	out.paste(png_pic, (png_bound[0], png_bound[1]), png_pic)
 
-		# 5. 保存结果
-		out.save(result_filepath)
+	# 5. 保存结果
+	out.save(result_filepath)
 
 
 def get_tile_bound(extent, zoom):
-		“””
-		获取瓦片的编号范围
-		“””
+	“””
+	获取瓦片的编号范围
+	“””	
     res = max_resolution / (2**zoom)
     min_x = int(math.floor((extent[0] - max_extent[0]) / (res * tile_size)))
     min_y = int(math.floor((max_extent[3] - extent[3]) / (res * tile_size)))
-		max_x = int(math.ceil((extent[2] - max_extent[0]) / (res * tile_size)))
+	
+	max_x = int(math.ceil((extent[2] - max_extent[0]) / (res * tile_size)))
     max_y = int(math.ceil((max_extent[3] - extent[1]) / (res * tile_size)))
-		
-		# 
+		 
     min_xx = min_x * tile_size
     min_yy = min_y * tile_size
 
@@ -87,9 +88,9 @@ def get_tile_bound(extent, zoom):
 
 
 def get_png_bound(extent, origin, zoom):
-		“””
-		根据缩放级别， 计算PNG图片相对瓦片底图的坐标
-		“””
+	“””
+	根据缩放级别， 计算PNG图片相对瓦片底图的坐标
+	“””
     res = max_resolution / (2 ** zoom)
     min_x = int(round((extent[0] - max_extent[0]) / res))
     min_y = int(round((max_extent[3] - extent[3]) / res))
