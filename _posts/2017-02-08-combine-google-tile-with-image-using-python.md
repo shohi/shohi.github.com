@@ -2,8 +2,8 @@
 layout: post
 title: 使用Python合并图片和Google瓦片
 category : tech
-guid: 13a81db3-be94-4a8d-859d-74fa07d1c045
-tags : [Python]
+guid: e5290ceb-eba1-11e6-9a6a-acbc32c984c8
+tags : [sketch]
 
 ---
 {% include JB/setup %}
