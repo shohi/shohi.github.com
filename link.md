@@ -22,7 +22,9 @@ group: navigation
 [What Should I Read Next?](http://www.whatshouldireadnext.com/)    
 [TOMMY TON](http://tommyton.tumblr.com/)   
 [The Sartorialist](http://www.thesartorialist.com/)
+
 [DeviantArt](https://www.deviantart.com/)
+
 [500px](https://500px.com/editors)
 <!--
 *# sort*
