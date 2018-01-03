@@ -10,9 +10,9 @@ tags: [Python, vscode]
 
 使用`vscode`设置`python`开发环境，主要有以下方面:
 
-> - 语法高亮显示，代码自动补及支持debug等
-> - 设置`python`路径及`virtualenv`
-> - 易于执行代码
+> 1. 语法高亮显示，代码自动补及支持debug等
+> 2. 设置`python`路径及`virtualenv`
+> 3. 易于执行代码
 
 这三个方面涉及到两个插件以及一个vscode配置.
 ## 1. `Python`插件
@@ -46,9 +46,7 @@ Python: Select Interpreter
 
 ## Reference
 1. 用VSCode写python的正确姿势, <http://www.cnblogs.com/bloglkl/archive/2016/08/23/5797805.html>
-
 2. Visual Studio code and virtualenv,<https://stackoverflow.com/questions/38545326/visual-studio-code-and-virtualenv>
-
 3. Code Runner for Visual Studio Code, <https://github.com/formulahendry/vscode-code-runner>
 
 *注: 所有操作在macOS进行, 其他系统会有所差别*
