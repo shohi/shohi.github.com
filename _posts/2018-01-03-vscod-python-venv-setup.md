@@ -12,14 +12,14 @@ tags: [Python, vscode]
 
 > - 语法高亮显示，代码自动补及支持debug等
 > - 设置`python`路径及`virtualenv`
-> - 易于执行代码
+> - 易于执行代码
 
 这三个方面涉及到两个插件以及一个vscode配置.
-## 1. `Python`插件
+## 1. `Python`插件
 安装`Python`插件以支持语法高亮、拼写检查及debug等
 
 ## 2. `vscode`设置
-设置`vscode`内置的`python`路径--即`virtualenv`，以便于vscode安装一些其他的module以及调试:
+设置`vscode`内置的`python`路径--即`virtualenv`，以便于vscode安装一些其他的module以及调试:
 
 <pre>
 <code>
@@ -29,13 +29,13 @@ Python: Select Interpreter
 </code>
 </pre>
 
-上述步骤也可以通过手工设置方式完成, `Command + ,`编辑`User Setttings`, 添加如下代码:
+上述步骤也可以通过手工设置方式完成, `Command + ,`编辑`User Setttings`, 添加如下代码:
 > "python.pythonPath": "${workspaceFolder}/venv/bin/python3"
 
 ## 3. `Code Runner`插件
-安装`Code Runner`插件，以便于执行Python脚本. 但是需要注意的`Code Runner`使用其自身指定的`python`路径, 需要更改为第2步中设置的`virtualenv`. **由于Code Runner内部所用变量不一定与vscode相同，因此要依据其doc上的说明!**
+安装`Code Runner`插件，以便于执行Python脚本. 但是需要注意的`Code Runner`使用其自身指定的`python`路径, 需要更改为第2步中设置的`virtualenv`. **由于Code Runner内部所用变量不一定与vscode相同，因此要依据其doc上的说明!**
 
-编辑`User Setting`, 添加如何代码
+编辑`User Setting`, 添加如下代码
 <pre>
 <code>
 "code-runner.executorMap": { 
