@@ -1,10 +1,9 @@
 ---
 layout: post
 title: vscode之python环境设置
-category : tech
-description: ""
+category: tech
 guid: 0ee5a216-65a4-4159-bd96-e1fa12fdb561
-tags : [Python, vscode]
+tags: [Python, vscode]
 
 ---
 {% include JB/setup %}
