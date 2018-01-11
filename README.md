@@ -26,6 +26,8 @@ Markdown 语法说明 (简体中文版)(转自<http://wowubuntu.com/markdown/>)
 
 * * *
 
+**CONSIDER USING `CommonMarkdown` <http://commonmark.org>**
+
 <h2 id="overview">概述</h2>
 
 <h3 id="philosophy">宗旨</h3>
@@ -737,7 +739,5 @@ Mac 平台
 
 * [Sublime Text 2](http://www.sublimetext.com/2) + [MarkdownEditing](http://ttscoff.github.com/MarkdownEditing/) / [教程](http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/)
 
-
-**CONSIDER USING `CommonMarkdown` <http://commonmark.org>**
 
 \*** 如有更好的 Markdown 免费编辑器推荐，请到[这里反馈](https://gitcafe.com/riku/Markdown-Syntax-CN/tickets/1)，谢谢！
