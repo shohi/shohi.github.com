@@ -6,7 +6,8 @@ group: navigation
 
 {% include JB/setup %}
 
-[豆瓣](http://book.douban.com)  
+[豆瓣](http://book.douban.com)
+[湾区日报](https://wanqu.co/)     
 [一席](http://yixi.tv/)    
 [简书](http://www.jianshu.com)   
 [马蜂窝](http://www.mafengwo.cn/)   
