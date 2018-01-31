@@ -77,6 +77,7 @@ JB :
   rss_path : /rss.xml
   about_path : /about.html
   link_path : /link.html
+  podcast_path: /podcast.html
 
   # Setting for customized post_collate
   posts_collate : 
