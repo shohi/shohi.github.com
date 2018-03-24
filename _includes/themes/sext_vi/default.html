@@ -29,12 +29,9 @@
 			
 			//获得div
 			var navigatorDiv = document.getElementById("isDefaultNavigatorContent");
-			var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-			var isFirefox = window.navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+			var defaultBrowser = "Firefox";  // instead `Chrome`
+			var isDefaultBrowser = window.navigator.userAgent.toLowerCase().indexOf(defaultBrowser.toLocaleLowerCase()) !== -1;
 			var count = 0;
-
-			var isDefaultBrowser = isFirefox;
-			var defaultBrowser = "Firefox";
 
 			if (!isDefaultBrowser && count == 0){
 				//设置div的属性
