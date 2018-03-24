@@ -15,4 +15,4 @@ comments: true
 <!--
 >  *假如你吃了个鸡蛋，觉得不错，何必要认识那下蛋的母鸡呢？*
 -->
-{% include JB/comments %}
+<!-- {% include JB/comments %} -->
