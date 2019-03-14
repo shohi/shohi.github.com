@@ -26,7 +26,7 @@ group: navigation
 [TOMMY TON](http://tommyton.tumblr.com/)   
 [The Sartorialist](http://www.thesartorialist.com/)    
 [DeviantArt](https://www.deviantart.com/)    
-[500px](https://500px.com/editors)
+[500px](https://500px.com/editors)    
 [笨方法学写作](https://www.cnfeat.com/)
 <!--
 *# sort*
