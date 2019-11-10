@@ -13,20 +13,19 @@ tags: [R]
 但是系统的当前时间值毕竟还是很大，直接将其作为id有些太长，有时希望将其转换成长度短一点的字符串。
 
 在`R`中将String转成Integer的函数是`base::strtoi(str, radix)`, 但是没有找到对应的`itostr(num, radix)`。
-系统中倒有一个函数`as.character`， 但是这是以10为基的转换。下文是整理的String与Integer之间含radix的转换函数, 
+系统中倒有一个函数`as.character`， 但是这是以10为基的转换。下文是整理的String与Integer之间含radix的转换函数,
 radix为`[1-36]`(`R`中可用`as.numeric(Sys.time())`获取系统当前的UNIX TIMESTAMP):
 
-<pre>
-<code class="R">
+```R
 # string and integer conversion with radix
 # MAX_RADIX = 36
 
 itostr <- function(num, radix) {
-  
+
   # 1. check input
   MAX_RADIX <- 36
   MAX_RADIX_STR <- tolower(c(as.character(0:9), letters))
-  
+
   num <- gsub(pattern = "\\s", replacement = "", x = paste(num, collapse = "|"), perl = T)
   if (!grepl(pattern = "^\\d+$", x = num, perl = T)) {
     stop(paste("num: ", paste(num, collapse = "|"), "不是正整数", sep = ""))
@@ -95,11 +94,10 @@ strtoi <- function(str, radix) {
   
   ret
 }
-
-</code>
-</pre>
+```
 
 #### 改进方向
 1. 支持`vector`参数
 
-*END*
+
+*The End.*

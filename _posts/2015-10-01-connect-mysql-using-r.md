@@ -15,30 +15,25 @@ tags : [R, MySQL]
 
 关于如何配置`Java`环境，另外参看[rJava设置]({% post_url 2014-01-03-rjava-set-up %})
 
-<pre>
-<code class="R">
-
+```R
 connMySQL <- function (db = 'mysql', host = 'localhost', user = 'root', passwd = 'passwd') {
-  
+
   # 1. load library
   library("rJava");
   library("DBI");
   library("RJDBC");
-  
+
   # db <- match.arg(db);
-  
+
   # 2. establish MySQL connector
   connector_path <- "jar/mysql-connector-java-5.1.29-bin.jar"
   drv <- JDBC("com.mysql.jdbc.Driver", connector_path, "`");
-  
-  
-  # 3. get ip, user and password 
-	# get ip 
-	
-	# x <- system("ipconfig", intern=TRUE)
-  #  
+
+  # 3. get ip, user and password
+  # get ip
+  # x <- system("ipconfig", intern=TRUE)
+  #
   # if(any(grep("IPv4", x))) {
-  #     
   #    z <- x[grep("IPv4", x)]
   #    ip <- gsub(".*? ([[:digit:]])", "\\1", z)[1]
   #    ip <- gsub("\\s", x = ip, replacement = "", perl = TRUE)
@@ -47,20 +42,19 @@ connMySQL <- function (db = 'mysql', host = 'localhost', user = 'root', passwd =
   #    ip <- gsub(".*? ([[:digit:]])", "\\1", z)[1]
   #    ip <- gsub("\\s", x = ip, replacement = "", perl = TRUE)
   #  }
-	# 
-  
+  #
+
   db_info <- paste('jdbc:mysql://', host, '/', db, sep = "");
-  
+
   conn <- dbConnect(drv, db_info, user, pswd);
-  
+
   return (conn);
-  
+
 }
 
 # 获取结果集
 # dbGetQuery(conn, sql)
+```
 
-</code>
-</pre>
 
-***#***
+*The End.*

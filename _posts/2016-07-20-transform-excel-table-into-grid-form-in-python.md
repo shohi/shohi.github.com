@@ -12,15 +12,13 @@ guid: 3c65bf07-54d7-11e6-b57c-acbc32c984c7
 
 使用Python将Excel中的每个非第一行、第一列的单元格转换成`{'id':'', 'group': sheet_name, 'subject_name': row_index + col_index, 'subject_value': value}`的形式,代码如下:
 
-<pre>
-<code class="Python">
-
+```python
 # -*- coding:utf-8 -*-
-'''
+"""
 使用Python处理Excel文件
 required:
   openpyxl
-'''
+"""
 import time
 count = 0
 ts = int(time.time())
@@ -28,7 +26,7 @@ ts = int(time.time())
 def int2base(x, base):
   import string
   digs = string.digits + string.letters
-  
+
   if x < 0: 
     sign = -1
   elif x == 0: 
@@ -57,7 +55,6 @@ def genId():
     ts = cts
   
   return int2base(ts,36) + '_' + int2base(count, 36)
-
 
 def readExcelToGrid(file_path, header=True):
   """
@@ -98,8 +95,6 @@ def readExcelToGrid(file_path, header=True):
     
   return grids
   
-
-
 def writeExcelFromGridArray(grids, output_path):
   from openpyxl import Workbook
     
@@ -119,8 +114,7 @@ def main():
 
 if __name__ == '__main__':
   main()
-  
-</code>
-</pre>
 
-*#END#*
+``` 
+
+*The End.*

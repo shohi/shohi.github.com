@@ -27,11 +27,12 @@ tags : [R]
 </table>
 </div>
 
-JVM.dll在系统中位置：`%JAVA_HOME%\jre\bin\server`.  
+JVM.dll在系统中位置：`%JAVA_HOME%\jre\bin\server`.
 
 
-附1：[JAVA坏境变量中的JAVA_HOME path classpath 的设置与作用.](http://www.cnblogs.com/kevinlocn/archive/2009/10/12/1581855.html)    
-附2：[设置jdk环境变量时lib中的rt.jar ,dt.jar ,tool.jar是什么，作用是什么.](http://www.cnblogs.com/beibei11/archive/2013/01/24/2875717.html)
+## 参考链接
+1. [JAVA坏境变量中的JAVA_HOME path classpath 的设置与作用.](http://www.cnblogs.com/kevinlocn/archive/2009/10/12/1581855.html)
+2. [设置jdk环境变量时lib中的rt.jar ,dt.jar ,tool.jar是什么，作用是什么.](http://www.cnblogs.com/beibei11/archive/2013/01/24/2875717.html)
 
 
 *The End.*

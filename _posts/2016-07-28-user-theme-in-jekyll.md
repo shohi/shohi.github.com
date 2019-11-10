@@ -27,7 +27,6 @@ theme:
 </code>
 </pre>
 
-其中有点需要注意，在低版本(3.1.6)的`_includes/JB/setup`中，关于`ASSET_PATH`配置不正确, `page.theme.name`一直为空。解决办法是添加`layout.theme.name`, 详细情况见issues-113(<https://github.com/plusjade/jekyll-bootstrap/issues/113>)
+其中有点需要注意，在低版本(3.1.6)的`_includes/JB/setup`中，关于`ASSET_PATH`配置不正确, `page.theme.name`一直为空。解决办法是添加`layout.theme.name`, 详细情况见issues-113 (<https://github.com/plusjade/jekyll-bootstrap/issues/113>).
 
-*#END#*
-
+*The End.*
