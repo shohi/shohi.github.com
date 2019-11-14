@@ -13,6 +13,14 @@
     {% endfor %}
   </span>
   {% endif %}
+  <span class="reading-time">
+      <!-- <i class="fa fa-clock-o"></i> -->
+    {% if read_time > 0 %}
+      {{ read_time }}
+    {% else %}
+      less 1
+    {% endif %} min
+  </span>
 
   </section>
 
