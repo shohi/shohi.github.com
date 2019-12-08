@@ -27,7 +27,8 @@ group: navigation
 [The Sartorialist](http://www.thesartorialist.com/)    
 [DeviantArt](https://www.deviantart.com/)    
 [500px](https://500px.com/editors)    
-[笨方法学写作](https://www.cnfeat.com/)
+[笨方法学写作](https://www.cnfeat.com/)    
+[寻我](https://seekbetter.me)
 <!--
 *# sort*
 -->
