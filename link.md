@@ -6,29 +6,31 @@ group: navigation
 
 {% include JB/setup %}
 
-[Changhai Lu](http://www.changhai.org/index.php)     
-[Matrix67](http://matrix67.com/)     
-[Paul Graham](http://www.paulgraham.com/)  
-[Ruan Yifeng](http://www.ruanyifeng.com/home.html)      
-[Scott Young](http://www.scotthyoung.com/)       
-[MR JAMIE](http://mrjamie.cc/)      
-[Hacker News](https://news.ycombinator.com/)  
-[湾区日报](https://wanqu.co/)       
-[豆瓣](http://book.douban.com)       
-[Medium](https://medium.com/)       
-[简书](http://www.jianshu.com)   
-[一席](http://yixi.tv/)    
-[马蜂窝](http://www.mafengwo.cn/)   
-[ZenHabits](http://zenhabits.net/)  
-[goodreads](http://www.goodreads.com/)  
-[What Should I Read Next?](http://www.whatshouldireadnext.com/)    
-[Positive psychology](http://www.positivepsychology.org/)  
-[TOMMY TON](http://tommyton.tumblr.com/)   
-[The Sartorialist](http://www.thesartorialist.com/)    
-[DeviantArt](https://www.deviantart.com/)    
-[500px](https://500px.com/editors)    
-[笨方法学写作](https://www.cnfeat.com/)    
-[寻我](https://seekbetter.me)
+[Anki](https://apps.ankiweb.net)
+
+[Changhai Lu](http://www.changhai.org/index.php)<br/>
+[Matrix67](http://matrix67.com/)<br/>
+[Paul Graham](http://www.paulgraham.com/)<br/>
+[Ruan Yifeng](http://www.ruanyifeng.com/home.html)<br/>
+[Scott Young](http://www.scotthyoung.com/)<br/>
+[MR JAMIE](http://mrjamie.cc/)<br/>
+[Hacker News](https://news.ycombinator.com/)<br/>
+[湾区日报](https://wanqu.co/)<br/>
+[豆瓣](http://book.douban.com)<br/>
+[Medium](https://medium.com/)<br/>
+[简书](http://www.jianshu.com)<br/>
+[一席](http://yixi.tv/)<br/>
+[马蜂窝](http://www.mafengwo.cn/)<br/>
+[ZenHabits](http://zenhabits.net/)<br/>
+[goodreads](http://www.goodreads.com/)<br/>
+[What Should I Read Next?](http://www.whatshouldireadnext.com/)<br/>
+[Positive psychology](http://www.positivepsychology.org/)<br/>
+[TOMMY TON](http://tommyton.tumblr.com/)<br/>
+[The Sartorialist](http://www.thesartorialist.com/)<br/>
+[DeviantArt](https://www.deviantart.com/)<br/>
+[500px](https://500px.com/editors)<br/>
+[笨方法学写作](https://www.cnfeat.com/)<br/>
+[寻我](https://seekbetter.me)<br/>
 <!--
 *# sort*
 -->
