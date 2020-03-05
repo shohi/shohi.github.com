@@ -1,6 +1,6 @@
 ---
 layout: post
-title: StatefulSet使用
+title: Kubernetes之StatefulSet
 category: tech
 guid: 67940C3D-996F-41FE-96AF-838AA77ED4F9
 tags: [tech, k8s, cloud, golang]
