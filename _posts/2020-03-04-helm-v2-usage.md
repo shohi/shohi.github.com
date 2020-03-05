@@ -64,7 +64,7 @@ helm init
 # 创建ServiceAccount
 kubectl --namespace kube-system create serviceaccount tiller
 
-# 给ServiceAccount设置权限：w:w
+# 给ServiceAccount设置权限
 kubectl create clusterrolebinding tiller-cluster-rule \
  --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
 
