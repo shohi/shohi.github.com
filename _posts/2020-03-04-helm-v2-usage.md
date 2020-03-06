@@ -14,7 +14,7 @@ tags: [tech, k8s, helm, cloud, golang]
 `helm`中将应用抽象成一个`chart`, `chart`就是应用所需的各种资源文件集合. `Helm`将其中不变化的部分
 抽象成模板, 易变的部分提取到一个yaml文件中--`values.yaml`, `Helm`利用这两种文件生成K8s所需要的各种资源以及管理应用.
 
-每次更新`values.yaml`时, `Helm`就去生成一个新版本的部署文件，同时监控整个更新过程.
+每次更新`values.yaml`时, `Helm`就生成一个新版本的部署文件，同时监控整个更新过程.
 如果有错误发生，`Helm`就回滚到先前的状态. 对于用户来说，只需要维护一个描述文件--`Values.yaml`就可以了,
 很大程度上减轻了K8s应用部署及管理的难度.
 
@@ -44,6 +44,13 @@ helmenv install v2.16.3
 
 # use specific version
 helmenv use v2.16.3
+```
+
+安装完helm之后, 最好加载[脚本自动补全(autocompletion)](https://helm.sh/docs/helm/helm_completion/#scrollpane), 按下`TAB`键会显示相应的提示. ([这篇文章](https://iridakos.com/programming/2018/03/01/bash-programmable-completion-tutorial)详细地解释了自动补全的机制)
+
+```bash
+# source <(helm completion bash)
+source <(helm completion zsh)
 ```
 
 ## Helm初始化
@@ -187,7 +194,7 @@ helm lint [chart-name]
 helm template --debug --name [release-name] [chart-name]
 ```
 
-- 查看Release
+- 查看所有Release
 
 helm将每次chart部署作为一个单独的release, 其管理单位也是release粒度.
 
@@ -198,6 +205,23 @@ helm list --all
 |> test	1       	DEPLOYED	nginx-0.1.0	default
 ```
 
+- 查看单个Release
+
+```
+helm list [release-name]
+```
+
+查看release对应的资源状态
+
+```
+helm status [release-name]
+```
+
+查看release生成的K8s资源YAML格式
+```
+helm get [release-name]
+```
+
 - 删除Release
 
 ```
@@ -206,7 +230,7 @@ helm delete [release-name] --purge
 
 ## 自定义模板
 
-helm允许用户[自定义模板](https://helm.sh/docs/howto/charts_tips_and_tricks/), 也称为[named template/partial template/subtemplate](https://helm.sh/docs/chart_template_guide/named_templates/). 这些模板可以被其他模板使用, 以减少重复书写. 自定模板可以接受0个或者1个参数(??), 使用`include`函数来调用, 类似宏展开, 模板展开的内容将插入到调用处.
+helm允许用户[自定义模板](https://helm.sh/docs/howto/charts_tips_and_tricks/), 也称为[named template/partial template/subtemplate](https://helm.sh/docs/chart_template_guide/named_templates/). 这些模板可以被其他模板使用, 以减少重复书写. 自定模板可以接受0个或者1个参数(也称为scope或者context??), 使用`include`函数来调用, 类似宏展开, 模板展开的内容将插入到调用处. (确切地说, golang的内置指令`template`也可以，但是其[不够灵活](https://v2.helm.sh/docs/chart_template_guide/#named-templates), 因此不推荐使用)
 
 同时[helm内置了很多函数](https://v2.helm.sh/docs/charts_tips_and_tricks/#know-your-template-functions), 可以对数据进行处理. 结合这些函数, 自定义模板就可以很灵活.
 
@@ -235,6 +259,10 @@ helm允许用户[自定义模板](https://helm.sh/docs/howto/charts_tips_and_tri
 {% endraw %}
 
 上面模板中用到了很多[sprig](https://masterminds.github.io/sprig/)库中定义的以及golang内置的函数-[append/list](https://masterminds.github.io/sprig/lists.html), [int](https://masterminds.github.io/sprig/conversion.html), [util](https://masterminds.github.io/sprig/integer_slice.html), [dict/set](https://masterminds.github.io/sprig/dicts.html), [join](https://masterminds.github.io/sprig/string_slice.html), [range/printf](https://golang.org/pkg/text/template/#hdr-Functions) (*builtin*).
+
+此外`helm`两个特殊的记号
+- `$`: 根变量(root scope), 对于一个chart, 它是固定的.
+- `.`: 当前变量, 随着上下文的不同, 其值也相应改变.
 
 ## Tips
 

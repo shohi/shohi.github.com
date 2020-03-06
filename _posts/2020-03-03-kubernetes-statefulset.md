@@ -156,7 +156,7 @@ kubectl delete sts [STS_NAME]
 
 ## 5. Tips
 
-- 给Pod中的Container传递信息
+- 向Pod中的Container传递信息
 
 常见的有三种 -- 环境变量, ConfigMap/Secret及Downward API. Downward API可以将Pod的metadata传递给其内部的container, 比如Node名称, Pod名称/IP/Label等.
 
@@ -185,6 +185,14 @@ spec:
 这些可以传递的变量名称是可以通过`kubect get pod ale-0 -o json`来得到一个大致的印象, 但是引用方式不一定完全按照json中的field名称(如cpu.requests/cpu.limits), 详细信息参考[Downward API文档](https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/).
 
 需要注意的是环境变量是Container级别, 同一个POD内Container[不共享环境变量](https://stackoverflow.com/questions/50203731/is-it-possible-for-2-containers-inside-a-pod-to-share-the-same-environment-varia). 更多关于ConfigMap及Downward API信息，可参考`Kubernetes in Action`第7/8章.
+
+- StatefulSet自动添加的label
+
+StatefulSet在创建新的Pod时, 会对[pod自动添加一个label](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#pod-name-label), 这个可用于`selector`.
+
+```
+statefulset.kubernetes.io/pod-name=[$(statefulset name)-$(ordinal)]
+```
 
 ## Note
 1. K8s版本-`v1.12.9`
