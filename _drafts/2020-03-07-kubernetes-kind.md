@@ -13,6 +13,5 @@ tags: [tech, k8s]
 ## Multiple Node
 
 
-
 ## 参考
 1. kind documentation, <https://kind.sigs.k8s.io/docs/user/quick-start/>
