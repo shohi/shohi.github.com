@@ -271,6 +271,7 @@ snapshot存到store之后,接下来就会对LogStore进行Compact, 删除已经�
 Question
 1. 为何不用committed来检查?
 2. LogStore中的Log Index一定是严格顺序的么? 有没有可能中间少几个?
+3. `CommitTimeout`与`ApplyTimeout`的区别
 
 ## Observation
 
