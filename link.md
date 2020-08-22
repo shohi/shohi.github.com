@@ -31,6 +31,7 @@ group: navigation
 [500px](https://500px.com/editors)<br/>
 [笨方法学写作](https://www.cnfeat.com/)<br/>
 [寻我](https://seekbetter.me)<br/>
+[manateelazycat](https://manateelazycat.github.io/index.html)<br/>
 <!--
 *# sort*
 -->
