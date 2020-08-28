@@ -6,6 +6,7 @@ group: navigation
 
 {% include JB/setup %}
 
+<br/>
 ## Blog
 [卢昌海](http://www.changhai.org/index.php)<br/>
 [阮一峰](http://www.ruanyifeng.com/home.html)<br/>
@@ -20,7 +21,7 @@ group: navigation
 [The Sartorialist](http://www.thesartorialist.com/)<br/>
 [笨方法学写作](https://www.cnfeat.com/)<br/>
 [寻我](https://seekbetter.me)<br/>
-[manateelazycat](https://manateelazycat.github.io/index.html)<br/><br/>
+[manateelazycat](https://manateelazycat.github.io/index.html)<br/>
 
 ## Tool
 [Anki](https://apps.ankiweb.net) <br/>
