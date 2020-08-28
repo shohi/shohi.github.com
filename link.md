@@ -6,7 +6,6 @@ group: navigation
 
 {% include JB/setup %}
 
-<br/>
 ## Blog
 [卢昌海](http://www.changhai.org/index.php)<br/>
 [阮一峰](http://www.ruanyifeng.com/home.html)<br/>
@@ -37,6 +36,7 @@ group: navigation
 [简书](http://www.jianshu.com)<br/>
 [一席](http://yixi.tv/)<br/>
 [马蜂窝](http://www.mafengwo.cn/)<br/>
+
 <!--
 *# sort*
 -->
