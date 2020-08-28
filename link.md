@@ -20,27 +20,22 @@ group: navigation
 [The Sartorialist](http://www.thesartorialist.com/)<br/>
 [笨方法学写作](https://www.cnfeat.com/)<br/>
 [寻我](https://seekbetter.me)<br/>
-[manateelazycat](https://manateelazycat.github.io/index.html)<br/>
+[manateelazycat](https://manateelazycat.github.io/index.html)<br/><br/>
 
 ## Tool
 [Anki](https://apps.ankiweb.net) <br/>
-
 [豆瓣](http://book.douban.com)<br/>
 [Goodreads](http://www.goodreads.com/)<br/>
 [What Should I Read Next?](http://www.whatshouldireadnext.com/)<br/>
-
 [DeviantArt](https://www.deviantart.com/)<br/>
 [500px](https://500px.com/editors)<br/>
-
 [lobste.rs](https://lobste.rs)<br/>
 [Hacker News](https://news.ycombinator.com/)<br/>
 [湾区日报](https://wanqu.co/)<br/>
-
 [Medium](https://medium.com/)<br/>
 [简书](http://www.jianshu.com)<br/>
 [一席](http://yixi.tv/)<br/>
 [马蜂窝](http://www.mafengwo.cn/)<br/>
-
 <!--
 *# sort*
 -->
