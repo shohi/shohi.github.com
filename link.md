@@ -21,6 +21,7 @@ group: navigation
 [笨方法学写作](https://www.cnfeat.com/)<br/>
 [寻我](https://seekbetter.me)<br/>
 [manateelazycat](https://manateelazycat.github.io/index.html)<br/>
+[Protesilaos Stavrou](https://protesilaos.com/)<br/>
 
 ## Tool
 [Anki](https://apps.ankiweb.net) <br/>
