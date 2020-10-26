@@ -22,6 +22,7 @@ group: navigation
 [寻我](https://seekbetter.me)<br/>
 [manateelazycat](https://manateelazycat.github.io/index.html)<br/>
 [Protesilaos Stavrou](https://protesilaos.com/)<br/>
+[Stepan Parunashvili](https://stopa.io/)<br/>
 
 ## Tool
 [Anki](https://apps.ankiweb.net) <br/>
