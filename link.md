@@ -23,6 +23,7 @@ group: navigation
 [manateelazycat](https://manateelazycat.github.io/index.html)<br/>
 [Protesilaos Stavrou](https://protesilaos.com/)<br/>
 [Stepan Parunashvili](https://stopa.io/)<br/>
+[Robin Schroer(sulami)](https://blog.sulami.xyz/)<br/>
 
 ## Tool
 [Anki](https://apps.ankiweb.net) <br/>
