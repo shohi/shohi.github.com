@@ -8,7 +8,7 @@ tags: [tech,gossip,go]
 ---
 {% include JB/setup %}
 
-`memberlist`[TODO: link]是基于gossip协议来进行节点相互发现的Go Package, 节点发现需要解决以下两个问题:
+[memberlist](https://github.com/hashicorp/memberlist)是基于gossip协议来进行节点相互发现的Go Package, 节点发现需要解决以下两个问题:
 * 如何发现其他节点
 * 如何判断其他节点是否依然存活
 
@@ -37,7 +37,7 @@ memberlist对此的解决方案是使用`gossip`发现及使用`probe`判断, �
     + 调用`Delegate`, 添加用户自定义的metadata
         * `Delegate`是memberlist提供的hook, 可以在memberlist的流程中加入用户
         * 自定义的功能或逻辑, 一般场景下用户都会实现`Delegate`接口, 使memberlist
-        * 与业务更好的配合.
+        * 与业务更好的结合.
     + 创建新的`alive`消息
     + 调用aliveNode, 以更新本地的节点map
         * 这是十分重要的方法,被用来更新节点的状态
@@ -57,8 +57,54 @@ memberlist之间常发的UDP消息类型如下, 更为详细的内容在`m.packe
 - dead - 确认某个节点已挂
 - alive - 确认某个节点活着
 
-这三种消息分别对应节点的三个状态 - `nodeState`(state.go), 是当前节点观察到的其他节点的状态.
-当前节点认为自己的状态只可能有两种 -- `alive`和`dead`, 其中`dead`也是主动调用`m.Leave`才会进入的状态.
+这三种消息分别对应节点的三个状态 - `nodeState`(state.go), 是当前节点观察到的其他节点(包括自己)的状态. 当前节点认为自己的状态只可能有两种 -- `alive`和`dead`, 其中`dead`也是主动调用`m.Leave`才会进入的状态. 对于节点的每一种状态变更，都会触发相应的函数-以将这种变更传播出去(gossip).
+
+节点的状态有四种
+
+- StateAlive
+- StateSuspect
+- StateDead - target节点不可达, 多次Ping都不通.
+- StateLeft - target节点主动Leave时, 当前节点会将其的状态置成Left.
+
+#### 1.1 aliveNode
+
+`aliveNode`的作用是将targe节点设成alive并广播消息, 其触发时机
+
+* 当前节点新加入cluster, 会将target节点设置成自己
+* 当节点收到alive消息
+* 当前节点主动调用UpdateNode, 利用Delegate机制更新自己的metadata, 进而广播出去
+* 在与邻居节点全量同步状态时, 如果邻居节点的列表中自己没有的alive节点, 那么当前节点会调用aliveNode
+
+流程如下:
+- 从自己的node map中取出targe节点的状态信息
+- 如果target节点找不到, 那么会在map中新建一条记录
+- 如果target节点存在, 判断是否更新target节点的信息
+    * 如果target节点的Addr有变化(IP或者Port与之前的不同), 进而判断能不能reclaim
+        + target节点的状态为Left, 或者
+        + 设置了`DeadNodeReclaimTime`, 且状态为Dead, 同时上一次的状态变化到现在的时间长于
+        + `DeadNodeReclaimTime`
+    + 可以reclaim的话, 就更新map中对应的记录
+    * 如果不能reclaim, memberlist就会打印一条Conflict错误信息并返回
+- 检查target节点是否是当前节点, 如果是的话，就调用`refute`, 向外驳斥自己还活着
+    + 自增自己的版本信息
+    + 广播更新后的含最新版本信息的alive消息
+- 如果target节点不是当前节点, 那么更新节点状态并调用`encodeBroadcastNotify`, 广播这条消息
+
+
+注意: 在K8s中pod重启会导致其地址变化, 为了让重启后的pod尽快加入cluster, `DeadNodeReclaimTime`应该设置且设为一个的值.
+
+#### 1.2 suspectNode
+
+`suspectNode`的作用是将targe节点设成suspect状态并广播消息, 其触发条件是
+
+* 当节点收到suspect消息
+*
+
+
+#### 1.3 deadNode
+
+当节点收到dead消息或者当前主动调用Leave时, 会触发suspectNode调用.
+
 
 ### 2. Join
 节点要加入cluster, 需要首调用Join方法与已在cluster中的节点建立连接. 如上所述，通常的做法是每个新节点都与指定的seed相连. 当然, Join之前首先需要Create创建节点. Join主要做一件事情 - `m.pushPullNode`
@@ -109,6 +155,12 @@ suspectNode主要是广播suspect消息, 并更新本地保存的target节点状
 
 #### Question
 1. 帮忙的邻居节点可不可以利用IndirectPing, 来判断其与target之间的联通性, 还是必须得再次走一遍probe流程?
+
+### 4. Broadcast
+
+所有需要广播的消息都会直接或者间接地调用`encodeBroadcastNotify`, 这个方法只有一个作用--将消息放到broadcasts的queue中--`queueBroadcast`, queue中的消息会被`gossip` goroutine定时读取, 然后通过UDP发送出去. memberlist中每个消息的都会被发送`N`次 - `N`是根据概率模型计算得出的, 这是为了尽快地将消息扩散到整个cluster同时又不至于造成message flooding, 因此memberlist内部自定义了特殊的queue结构
+-- `TransmitLimitedQueue` 来满足这种需求.
+
 
 ## Timeout及Interval
 memberlist的配置中包含多种时间设置, 包括Timeout和Interval(config.go)

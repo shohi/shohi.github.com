@@ -22,7 +22,7 @@ raft node通过NewRaft方法创建并开始工作, NewRaft将创建了3个long-r
     - runFSM
     - runSnapshots
 
-创建完node以后, 一般来说必须调用`BootstrapCluster`以启动整个cluster. 这是因为NewRaft的参数中没有地方指定cluster的成员, 而`BootstrapCluster`的唯一参数就是cluster成员. 但是有另外一种情况, node可以从snapshotStore从获取成员信息，而snapshotStore对NewRaft是可见.
+创建完node以后, 一般来说必须调用`BootstrapCluster`以启动整个cluster. 这是因为NewRaft的参数中没有地方指定cluster的成员, 而`BootstrapCluster`的唯一参数就是cluster成员. 但是有另外一种情况, node可以从snapshotStore从获取成员信息，而snapshotStore对NewRaft是可见的.
 
 
 ### 1. run
